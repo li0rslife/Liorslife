@@ -17,7 +17,7 @@ body {
     overflow-x: hidden;
 }
 
-/* יצירת רקע סגול כהה עם תבנית */
+/* רקע התבנית - הוספתי אנימציה שזזה */
 .background-pattern {
     position: fixed;
     top: 0;
@@ -33,6 +33,17 @@ body {
     background-color: #0a0115;
     z-index: -1;
     opacity: 0.6;
+    animation: moveBackground 15s linear infinite; /* הפעלת האנימציה */
+}
+
+/* הגדרת התנועה של הרקע */
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40px 40px;
+    }
 }
 
 .container {
@@ -41,8 +52,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     width: 100%;
-    max-width: 450px;
-    padding: 30px 20px;
+    max-width: 480px; /* הגדלתי קצת את הרוחב כדי שהכפתורים הגדולים ייכנסו טוב */
+    padding: 30px 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -53,13 +64,12 @@ body {
 
 .avatar-wrapper {
     position: relative;
-    width: 110px;
-    height: 110px;
+    width: 130px; /* הגדלתי את התמונה */
+    height: 130px;
     margin: 0 auto 15px auto;
     border-radius: 50%;
-    /* שיניתי את הניאון לירוק של קיק שישתלב טוב */
     box-shadow: 0 0 15px #53fc18, 0 0 30px #00d4ff, inset 0 0 10px #53fc18;
-    padding: 3px;
+    padding: 4px;
     background: linear-gradient(45deg, #53fc18, #00d4ff);
 }
 
@@ -72,14 +82,14 @@ body {
 }
 
 .username {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* שם משתמש גדול יותר */
     font-weight: 700;
     margin-bottom: 10px;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .bio {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #cccccc;
     line-height: 1.4;
     margin-bottom: 10px;
@@ -88,14 +98,14 @@ body {
 .links {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px; /* מרווח גדול יותר בין הכפתורים */
 }
 
 .link-btn {
     display: flex;
     align-items: center;
-    padding: 15px 20px;
-    border-radius: 12px;
+    padding: 20px 25px; /* הגדלת הכפתורים (גובה ורוחב פנימי) */
+    border-radius: 15px; /* פינות קצת יותר עגולות */
     text-decoration: none;
     color: white;
     font-weight: 500;
@@ -104,18 +114,20 @@ body {
 }
 
 .link-btn:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
     filter: brightness(1.1);
 }
 
 .btn-text {
     flex-grow: 1;
     text-align: center;
+    font-size: 1.15rem; /* טקסט גדול יותר בתוך הכפתור */
+    font-weight: 700; /* טקסט מודגש יותר */
 }
 
 .icon-right {
-    font-size: 1.2rem;
-    width: 24px;
+    font-size: 1.6rem; /* אייקונים גדולים יותר */
+    width: 35px;
 }
 
 /* סגנונות לכפתורים השונים */
@@ -151,15 +163,15 @@ body {
 .badge {
     background: rgba(83, 252, 24, 0.2);
     color: #53fc18;
-    padding: 2px 8px;
+    padding: 3px 10px;
     border-radius: 10px;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 700;
 }
 
 footer {
     text-align: center;
-    margin-top: 30px;
-    font-size: 0.8rem;
+    margin-top: 35px;
+    font-size: 0.9rem;
     color: #666;
 }
