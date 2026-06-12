@@ -188,3 +188,14 @@ footer {
     font-size: 0.9rem;
     color: #666;
 }
+
+/* עיצוב לכפתור דיסקורד מסמכים/חוקים */
+.discord-doc {
+    background: linear-gradient(90deg, #1e1f22, #2b2d31); /* אפור כהה של דיסקורד */
+    border: 1px solid #5865F2; /* מסגרת בצבע הכחול/סגול של דיסקורד */
+}
+
+/* אפקט זוהר כשעוברים עם העכבר */
+.discord-doc:hover {
+    box-shadow: 0 0 15px rgba(88, 101, 242, 0.4);
+}
